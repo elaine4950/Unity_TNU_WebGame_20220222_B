@@ -28,7 +28,7 @@ namespace MengFan
             // (初始值 ; 條件 ; 迴圈結束會執行程式)
             for (int i = 0; i < dataWeapon.v35pawnPoint.Length; i++)
             {
-                Gizmos.DrawSphere(dataWeapon.v35pawnPoint[i], 0.5f);
+                Gizmos.DrawSphere(dataWeapon.v35pawnPoint[i], 0.1f);
             }
             
         }
@@ -55,7 +55,13 @@ namespace MengFan
             // 如果計時器 大於等於 間隔時間 就生成 武器
             if (timer >= dataWeapon.interval)
             {
-                print("生成武器");
+                //print("生成武器");
+                //座標
+                Vector3 pos = transform.position + dataWeapon.v35pawnPoint[0];
+                // Quaternion 四位元 : 紀錄角度資訊類型
+                // Quaternion.Identity 零度角(0，0，0)
+                // 生成(物件、座標、角度)
+                Instantiate(dataWeapon.goWeapon, pos, Quaternion.identity);
                 timer = 0;
             }
         }
