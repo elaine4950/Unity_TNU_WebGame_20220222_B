@@ -28,11 +28,18 @@ namespace MengFan
             // (初始值 ; 條件 ; 迴圈結束會執行程式)
             for (int i = 0; i < dataWeapon.v35pawnPoint.Length; i++)
             {
-                Gizmos.DrawSphere(dataWeapon.v35pawnPoint[i], 0.1f);
+                Gizmos.DrawSphere(transform.position + dataWeapon.v35pawnPoint[i], 0.1f);
             }
             
         }
 
+        private void Start()
+        {
+            // 2D 物理.忽略圖層碰撞(圖層1，圖層2)
+            Physics2D.IgnoreLayerCollision(3, 6); // 玩家 與 武器 不碰撞
+            Physics2D.IgnoreLayerCollision(6, 6); // 武器 與 武器 不碰撞
+            Physics2D.IgnoreLayerCollision(6, 7); // 武器 與 牆壁 不碰撞
+        }
         private void Update()
         {
             SpawnWeapon();
@@ -56,12 +63,16 @@ namespace MengFan
             if (timer >= dataWeapon.interval)
             {
                 //print("生成武器");
+                // 隨機值 = 隨機.範圍(最小值，最大值) - 整數不包含最大值
+                int random = Random.Range(0, dataWeapon.v35pawnPoint.Length);
                 //座標
-                Vector3 pos = transform.position + dataWeapon.v35pawnPoint[0];
+                Vector3 pos = transform.position + dataWeapon.v35pawnPoint[random];
                 // Quaternion 四位元 : 紀錄角度資訊類型
                 // Quaternion.Identity 零度角(0，0，0)
-                // 生成(物件、座標、角度)
-                Instantiate(dataWeapon.goWeapon, pos, Quaternion.identity);
+                // 暫存武器 = 生成(物件、座標、角度)
+                GameObject temp = Instantiate(dataWeapon.goWeapon, pos, Quaternion.identity);
+                // 暫存武器.取得元件<剛體>().添加推力( 方向 * 速度)
+                temp.GetComponent<Rigidbody2D>().AddForce(dataWeapon.v3Direction * dataWeapon.speed);
                 timer = 0;
             }
         }

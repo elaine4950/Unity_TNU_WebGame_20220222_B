@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa2ccc4c7d853e341af954fe59e98ce8, type: 3}
   m_Name: "\u65A7\u982D"
   m_EditorClassIdentifier: 
-  speed: 500
+  speed: 300
   attack: 10
   countStart: 1
   countMax: 10
-  interval: 3.5
+  interval: 0.3
   v35pawnPoint:
   - {x: -0.3, y: 0, z: 0}
   - {x: 0, y: 0.3, z: 0}
   - {x: 0.3, y: 0, z: 0}
-  goWeapon: {fileID: 6796002879878145212, guid: ce564233bae59c24487287c267bfd45f, type: 3}
-  v3Direction: {x: 0, y: 0, z: 0}
+  goWeapon: {fileID: 1060725658799813646, guid: 17d70212459975c44a1d4644b691e80e, type: 3}
+  v3Direction: {x: 1, y: 1, z: 0}
