@@ -8,7 +8,8 @@ namespace MengFan
     {
         [SerializeField, Header("武器資料")]
         private DataWeapon dataWeapon;
-
+        [SerializeField, Header("武器刪除時間"), Range(0, 10)]
+        private float destroyWeapenTime = 3.5f;
         /// <summary>
         /// 計時器
         /// </summary>
@@ -74,6 +75,8 @@ namespace MengFan
                 // 暫存武器.取得元件<剛體>().添加推力( 方向 * 速度)
                 temp.GetComponent<Rigidbody2D>().AddForce(dataWeapon.v3Direction * dataWeapon.speed);
                 timer = 0;
+                // 刪除物件(要刪除的物件，延遲刪除時間)
+                Destroy(temp, destroyWeapenTime);
             }
         }
     }
