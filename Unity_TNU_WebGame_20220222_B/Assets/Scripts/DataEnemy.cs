@@ -20,7 +20,10 @@ namespace MengFan
         public float hp = 100;
         [Header("掉落經驗值機率"), Range(0, 1)]
         public float expDropProbability = 0.8f;
+        [Header("掉落經驗值類型")]
         public TypeExp typeExp;
+        [Header("停止距離"), Range(0, 10)]
+        public float stopDistance = 1.5f;
     }
     /// <summary>
     /// 經驗值類型:小、中、大

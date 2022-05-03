@@ -77,6 +77,8 @@ namespace MengFan
                 timer = 0;
                 // 刪除物件(要刪除的物件，延遲刪除時間)
                 Destroy(temp, destroyWeapenTime);
+                // 取得武器.攻擊力 = 武器資料.攻擊力
+                temp.GetComponent<Weapon>().attack = dataWeapon.attack;
             }
         }
     }
