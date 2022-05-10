@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace MengFan
@@ -13,7 +11,7 @@ namespace MengFan
         {
             if (collision.gameObject.tag == "敵人")
             {
-                print("<color=red打到敵人:" + collision.gameObject + "</color>");
+                print("<color=red>打到敵人:" + collision.gameObject + "</color>");
                 collision.gameObject.GetComponent<HurtSystem>().GetHurt(attack);
             }
         }

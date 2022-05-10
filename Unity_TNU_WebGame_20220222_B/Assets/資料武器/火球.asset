@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "\u706B\u7403"
   m_EditorClassIdentifier: 
   speed: 500
-  attack: 7
+  attack: 30
   countStart: 3
   countMax: 6
   interval: 3

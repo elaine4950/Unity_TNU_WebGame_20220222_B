@@ -83,7 +83,7 @@ namespace MengFan
             if(timerAttack < data.cd)
             {
                 timerAttack += Time.deltaTime;
-                print("<color=red>攻擊計時器:" + timerAttack + "</color>");
+                //print("<color=red>攻擊計時器:" + timerAttack + "</color>");
             }
             else
             {

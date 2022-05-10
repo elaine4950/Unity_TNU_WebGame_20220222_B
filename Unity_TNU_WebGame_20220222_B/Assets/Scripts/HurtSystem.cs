@@ -20,8 +20,9 @@ namespace MengFan
         /// 受到傷害
         /// </summary>
         /// <param name="damage">收到的傷害值</param>
-        public void GetHurt(float damage)
+        public virtual void GetHurt(float damage)
         {
+            if (hp <= 0) return;
             hp -= damage;
             print("<color=#887700>受到傷害:" + damage + "</color>");
 
@@ -30,7 +31,7 @@ namespace MengFan
         /// <summary>
         /// 死亡
         /// </summary>
-        private void Dead()
+        protected virtual void Dead()
         {
             hp = 0;
             print("<color=#887700>角色死亡:" + gameObject + "</color>");
