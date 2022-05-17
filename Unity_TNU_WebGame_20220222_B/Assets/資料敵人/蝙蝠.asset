@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 183c3a8ac87fb114ba7033d2cba62161, type: 3}
   m_Name: "\u8759\u8760"
   m_EditorClassIdentifier: 
-  speed: 2
-  attack: 10
+  speed: 1
+  attack: 50
   cd: 2
   hp: 50
   expDropProbability: 0.8

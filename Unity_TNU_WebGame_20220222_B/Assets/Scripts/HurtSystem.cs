@@ -10,12 +10,14 @@ namespace MengFan
     /// </summary>
     public class HurtSystem : MonoBehaviour
     {
+        
         //1.public 公開 所有類別都可存取
         //2.private 私人 僅限此類別可以存取
         //3. protected 保護 僅限此類別與子類別可以存取
         [SerializeField, Header("血量"), Range(0, 10000)]
         protected float hp = 50;
 
+ 
         /// <summary>
         /// 受到傷害
         /// </summary>
@@ -35,6 +37,7 @@ namespace MengFan
         {
             hp = 0;
             print("<color=#887700>角色死亡:" + gameObject + "</color>");
+        
         }
 
     }

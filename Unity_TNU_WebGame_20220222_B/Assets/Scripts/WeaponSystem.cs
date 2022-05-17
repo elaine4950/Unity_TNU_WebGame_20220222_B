@@ -44,6 +44,25 @@ namespace MengFan
         private void Update()
         {
             SpawnWeapon();
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                // 隨機值 = 隨機.範圍(最小值，最大值) - 整數不包含最大值
+                int random = Random.Range(0, dataWeapon.v35pawnPoint.Length);
+                //座標
+                Vector3 pos = transform.position + dataWeapon.v35pawnPoint[random];
+                // Quaternion 四位元 : 紀錄角度資訊類型
+                // Quaternion.Identity 零度角(0，0，0)
+                // 暫存武器 = 生成(物件、座標、角度)
+                GameObject temp = Instantiate(dataWeapon.goWeapon, pos, Quaternion.identity);
+                // 暫存武器.取得元件<剛體>().添加推力( 方向 * 速度)
+                temp.GetComponent<Rigidbody2D>().AddForce(dataWeapon.v3Direction * dataWeapon.speed);
+                timer = 0;
+                // 刪除物件(要刪除的物件，延遲刪除時間)
+                Destroy(temp, destroyWeapenTime);
+                // 取得武器.攻擊力 = 武器資料.攻擊力
+                temp.GetComponent<Weapon>().attack = dataWeapon.attack;
+            }
         }
         /// <summary>
         /// 生成武器

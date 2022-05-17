@@ -171,4 +171,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 50
   data: {fileID: 11400000, guid: b756bef230f5b4d49b1eacef24253897, type: 2}
-  goCanvasHurt: {fileID: 3617684624059124162, guid: dc1021a56f1ba9e479dfc8e98071dd4e, type: 3}
+  goCanvasHurt: {fileID: 4726911080912730818, guid: dc1021a56f1ba9e479dfc8e98071dd4e, type: 3}
+  goExp: {fileID: 4754308235466341010, guid: 66d8b553b9556ba41b05fc0db6851de1, type: 3}

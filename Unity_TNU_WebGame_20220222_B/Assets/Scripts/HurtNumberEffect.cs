@@ -23,6 +23,10 @@ namespace MengFan
             textHurtNumber = transform.Find("¶Ë®`¼Æ­È").GetComponent<Text>();
 
             //StartCoroutine(Test());
+            StartCoroutine(Fade());
+            StartCoroutine(Scale());
+            StartCoroutine(Offset());
+            
             StartCoroutine(Fade(-1,0.8f));
             StartCoroutine(Scale(-1,0.8f));
             StartCoroutine(Offset(-1,0.8f));
