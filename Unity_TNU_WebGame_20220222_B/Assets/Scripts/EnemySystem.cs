@@ -31,7 +31,7 @@ namespace MengFan
 
             // 數學.插值(A，B，百分比)
             float result = Mathf.Lerp(0, 100, 0.5f);
-            print("0 與 100 的 0.5 插值結果:" + result);
+            //print("0 與 100 的 0.5 插值結果:" + result);
 
         }
 

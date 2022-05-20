@@ -50,7 +50,7 @@ namespace MengFan
 
         private void LevelUp()
         {
-            dataWeapon.attack += 10;
+            dataWeapon.attack += 5;
             dataWeapon.interval -= 0.02f;           
             
         }

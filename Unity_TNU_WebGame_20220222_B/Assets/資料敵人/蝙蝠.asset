@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "\u8759\u8760"
   m_EditorClassIdentifier: 
   speed: 1
-  attack: 50
+  attack: 10
   cd: 2
   hp: 50
   expDropProbability: 0.8

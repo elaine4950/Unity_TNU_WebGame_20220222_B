@@ -13,13 +13,11 @@ MonoBehaviour:
   m_Name: "\u65A7\u982D"
   m_EditorClassIdentifier: 
   speed: 300
-  attack: 50
+  attack: 10
   countStart: 1
   countMax: 10
-  interval: 1.9200001
+  interval: 1.8000002
   v35pawnPoint:
-  - {x: -0.3, y: 0, z: 0}
-  - {x: 0, y: 0.3, z: 0}
-  - {x: 0.3, y: 0, z: 0}
-  goWeapon: {fileID: 1060725658799813646, guid: 17d70212459975c44a1d4644b691e80e, type: 3}
-  v3Direction: {x: 0.5, y: 0.8, z: 0}
+  - {x: 0.7, y: -1, z: 0}
+  goWeapon: {fileID: 661546387074778051, guid: 11461c25964e94244bb282ed7045c260, type: 3}
+  v3Direction: {x: 0, y: 1.5, z: 0}
